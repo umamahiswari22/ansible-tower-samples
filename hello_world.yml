@@ -5,3 +5,9 @@
       debug:
         msg: "Hello World!"
 
+    - name: Download artifacts from artifactory
+      get_url:
+        url: http://artifactorypro.devops.private.payaas.ipccsandbox.com/artifactory/Test-maven-app/MAVEN-APP/JARS/{{ BUILD_NUMBER }}/my-app-1.0-SNAPSHOT.jar
+        dest: /root/Uma/jenkins/jars
+        url_username: admin
+        url_password: NewPassword
